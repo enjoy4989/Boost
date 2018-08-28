@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta content="text/html; charset=euc-kr">
+<title>HTML5</title>
+<style type="text/css"> 
+    body {
+        text-align: center;
+        color: #FFF;
+        width: 900px;
+    }
+    div#wapper {
+        width: 100%;
+        text-align: left;
+        min-height: 300px;
+        margin: 0 auto;
+    }
+    header, footer, nav, aside, section {
+        border: 1px solid #999;
+        margin: 5px;
+        padding: 10px;
+    }
+    header {
+        height: 50px;
+        background-color: orange;
+    }
+    nav, section, aside {
+        float: left;
+        height: 200px;
+    }
+    ul{
+        list-style: none;
+    }
+    div.menu ul li{
+
+        display: inline;
+        border: solid 1px gray;
+        
+    }
+    div.menu ul li a{
+        text-decoration: none;
+        border: solid 1px black;
+    }
+    nav ul li a{
+        border: solid 1px gray;
+        text-decoration: none;
+    }
+
+            #home{
+                width:80px;
+                padding: 1px;
+                background-color:#999;
+                border: 20px solid gold;
+                box-sizing: border-box;
+            }
+            #intro{
+                width:80px;
+                padding: 1px;
+                background-color:#999;
+                border: 20px solid gold;
+                box-sizing: border-box;
+            }
+            #gallery{
+                width:80px;
+                padding: 1px;
+                background-color:#999;
+                border: 20px solid gold;
+                box-sizing: border-box;
+            }
+            #rightnow{
+                width:80px;
+                padding: 1px;
+                background-color:#999;
+                border: 20px solid gold;
+                box-sizing: border-box;
+            }
+
+    nav {
+        background-color: tomato;
+        width: 100px;
+    }
+    section {
+        background-color: royalblue;   
+        width: 604px;
+    }
+    aside {
+        background-color: limegreen;
+        width: 100px;
+    }
+    footer {
+        height: 50px;
+        background-color: dimgray;
+        position: relatiev;
+        clear: both;
+    }
+    article {
+        width: 90%;
+        margin: 20px;
+        background-color: black;
+    }
+</style>
+ 
+</head>
+
+<body>
+<!-- JavaScript 배열문 & 반복문 -->
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while( i < alist.length ){
+            alist[i].style.color = 'gold';
+            i = i + 1;
+        }
+    }else{ 
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while( i < alist.length ){
+            alist[i].style.color = 'white';
+            i = i + 1;
+        }    
+    }
+    ">
+    <div id="wapper">
+        <!--헤더시작-->
+        <header>
+            <div class="menu">
+                <ul>
+                    <li id="home"><a href="#">Home</a></li>
+                    <li id="intro"><a href="#">ENjOY</a></li>
+                    <li id="gallery"><a href="#">Gallery</a></li>
+                    <li id="rightnow"><a href="#">RightNow</a></li>
+                </ul>
+            </div>
+        </header>
+        <!--네비게이션-->
+        <nav>
+            <script>
+                var enjoycode = ['book','issue','food','tour','tech','fitness'];
+            </script>
+            <h3>Menu</h3>
+            <ul>
+                <script>
+                var i = 0;
+                while(i < enjoycode.length){    
+                    document.write('<li><a href="http://xeox.github.io/intro/">'+enjoycode[i]+'</a></li>');
+                    i = i +1;
+                }
+                </script>
+            </ul>
+        </nav>
+        <!--콘텐츠부분-->
+        <section>
+            <p>section</p>
+            <article>
+                <p>(article) Everything is in my mind.</p>
+            </article>
+        </section>
+        <!--사이드바-->
+        <aside>
+            <p>aside</p>
+        </aside>
+        <!--풋터-->
+        <footer>footer</footer>
+    </div>
+
+</body>
+</html>
